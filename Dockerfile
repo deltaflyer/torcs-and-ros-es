@@ -89,6 +89,9 @@ RUN make
 RUN make install
 RUN make datainstall
 
+# Add torcs config
+ADD torcs_user_config /root/.torcs
+
 # Integrate ROS torcs packages
 ADD torcs_ros /opt/torcs_ros
 RUN ln -s /opt/torcs_ros/* /root/workspace/src/ \

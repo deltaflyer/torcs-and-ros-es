@@ -28,5 +28,5 @@ docker run \
     -v /dev/shm:/dev/shm \
     -v $DIR/torcs-1.3.7:/sources/torcs:ro \
     -v $DIR/torcs_ros:/opt/sources/torcs_ros:ro \
-    -v $DOR/shared:/shared \
+    -v $DIR/shared:/shared \
     $image_tag

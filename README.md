@@ -1,6 +1,8 @@
-# Low-Power Autonomous Driving Testbed with ROS and TORCS
+# TORCS and ROS-ES
 
+a Low-Power Autonomous Driving Testbed with ROS and TORCS and a pun based on _Runs and Roses_
 
+![video screenshot](docs/images/torcs_rviz.png)
 
 ## What is included
 

@@ -63,6 +63,7 @@ ENV ROS_DISTRO melodic
 RUN apt-get update && apt-get install -y \
     ros-melodic-desktop-full=1.4.1-0* \
     *opencv* \
+    python-catkin-tools \
     && rm -rf /var/lib/apt/lists/*
 
 # Create ros workspace
@@ -97,4 +98,11 @@ ADD torcs_ros /opt/torcs_ros
 RUN ln -s /opt/torcs_ros/* /root/workspace/src/ \
     && rm /root/workspace/src/README.md
 
-
+# Install visual Studio code
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt install -y wget \
+    && wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add - \
+    && add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" \
+    && apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt install -y code \
+    && rm -rf /var/lib/apt/lists/*

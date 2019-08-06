@@ -28,5 +28,9 @@ docker run \
     -v /dev/shm:/dev/shm \
     -v $DIR/torcs-1.3.7:/sources/torcs:ro \
     -v $DIR/torcs_ros:/opt/sources/torcs_ros:ro \
-    -v $DIR/shared:/shared \
+    -v $DIR/shared:/root/shared \
+    -v $DIR/shared/workspace:/root/ros_workspace \
+    -v $DIR/shared/vscode:/root/.vscode \
+    -v $DIR/shared/vscode-cpptools:/root/.vscode-cpptools \
+    -v $DIR/shared/.bash_history:/root/.bash_history \
     $image_tag

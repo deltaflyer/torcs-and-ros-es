@@ -28,7 +28,7 @@ a Low-Power Autonomous Driving Testbed with ROS and TORCS and a pun based on _Ru
 ## Usage
 
 * Update the GIT-submodules `git submodule init && git submodule update`
-* Run following script `run_vtorcs_in_docker.sh`. It builds the necessary docker image and starts the docker container.
+* Run following script `run_environment.sh`. It builds the necessary docker image and starts the docker container.
 * open a browser and goto the url `http://127.0.0.1:6080/#/`
 * run `torcs` by using the desktop icon
 * Get to run the _quickrace_  in the menu - you won't be able to though, it will lock expecting a car to connect from the ROS adapter
